@@ -1,4 +1,292 @@
 ---
 ---
+
 @charset "utf-8";
-// Your custom css /scss here
+
+ol,
+ul {
+  margin-bottom: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 10px;
+  right: 18px;
+  color: #fff;
+  background-color: #7f1710;
+  padding: 0 2px;
+  font-size: 85%;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .scroll-down {
+    display: block;
+  }
+}
+
+.navbar-chulapa .navbar-nav .nav-link {
+  color: #faf6f5;
+}
+
+.splash-chulapa-image {
+  background-color: #7f1710;
+  background-position-y: center;
+  background-size: 120%;
+  margin-top: -25px;
+}
+
+.splash-chulapa-image h1,
+.splash-chulapa-image hr {
+  display: none;
+}
+
+.splash-chulapa-image .chulapa-subtitle {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  color: #7f1710;
+  font-weight: 400;
+}
+
+.splash-chulapa-image .chulapa-subtitle span {
+  background-color: #fff;
+}
+
+.splash-chulapa-image p {
+  text-shadow: none;
+}
+
+.splash-chulapa p,
+.splash-chulapa-image p {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .splash-chulapa-image {
+    background-size: contain;
+    margin-top: -50px;
+  }
+
+  .splash-chulapa p,
+  .splash-chulapa-image p {
+    font-size: 1.5rem;
+  }
+  .splash-chulapa-image .chulapa-subtitle {
+    bottom: 20px;
+  }
+}
+
+#quem-somos .top-img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#quem-somos .top-img img {
+  margin: 0;
+  max-height: 300px;
+}
+
+#quem-somos h1 {
+  font-size: 3.5rem;
+  color: #7f1710;
+  font-weight: bold;
+  font-family: "League Spartan";
+  align-self: end;
+  display: flex;
+  line-height: 1;
+  margin: 0 0 20px 0;
+  text-decoration: underline;
+}
+
+#quem-somos .bottom-text {
+  display: flex;
+  margin-top: 20px;
+  padding: 0 0 0 35px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 600px) {
+  #quem-somos .top-img {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  #quem-somos h1 {
+    width: min-content;
+    margin: 0 0 -16px 0;
+    text-decoration: none;
+  }
+
+  #quem-somos h1::before {
+    content: "";
+    width: 40px;
+    background-color: #975538;
+    margin-top: 4px;
+    margin-right: 10px;
+    margin-bottom: 16px;
+  }
+
+  #quem-somos .bottom-text {
+    margin-top: 40px;
+  }
+}
+
+#quem-somos .bottom-text li {
+  padding: 0 0 20px 0;
+  counter-increment: muffins;
+  position: relative;
+  flex: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #quem-somos .bottom-text li {
+    padding: 0 50px 20px 0;
+    width: 50%;
+  }
+}
+
+@media (min-width: 880px) {
+  #quem-somos .bottom-text {
+    flex-wrap: nowrap;
+  }
+
+  #quem-somos .bottom-text li {
+    padding: 0 40px 0 0;
+    width: 100%;
+    flex: 1 1;
+  }
+}
+
+@media (min-width: 992px) {
+  #quem-somos h1 {
+    font-size: 4rem;
+  }
+
+  #quem-somos .bottom-text li {
+    padding: 0 50px 0 0;
+    flex: 1 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  #quem-somos .bottom-text li {
+    padding: 0 70px 0 0;
+  }
+}
+
+#quem-somos .bottom-text li::before {
+  top: 7px;
+}
+
+#quem-somos .bottom-text li:last-of-type {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  #quem-somos .bottom-text li::before {
+    top: 0;
+  }
+
+  #quem-somos .bottom-text li:last-of-type {
+    padding: 0;
+    order: 2;
+
+    &::before {
+      content: "02";
+    }
+  }
+
+  #quem-somos .bottom-text li:nth-of-type(2) {
+    order: 4;
+
+    &::before {
+      content: "04";
+    }
+  }
+
+  #quem-somos .bottom-text li:nth-of-type(3) {
+    order: 3;
+
+    &::before {
+      content: "03";
+    }
+  }
+}
+
+@media (min-width: 880px) {
+  #quem-somos .bottom-text li:last-of-type {
+    order: 4;
+
+    &::before {
+      content: "04";
+    }
+  }
+
+  #quem-somos .bottom-text li:nth-of-type(2) {
+    order: 2;
+
+    &::before {
+      content: "02";
+    }
+  }
+}
+
+#quem-somos .bottom-text li::before {
+  content: "0" counter(muffins);
+  background-color: #7f1710;
+  color: #fff;
+  position: absolute;
+  left: -35px;
+  padding: 2px 5px;
+  font-size: 85%;
+}

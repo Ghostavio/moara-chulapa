@@ -1,5 +1,41 @@
 <!-- start custom scripts to be placed at the bottom of the page -->
 
+<script src="assets/js/sliding-scroll.min.js"></script>
+<script>
+  function isElement(element) {
+    return element instanceof Element || element instanceof HTMLDocument;
+  }
 
+  function goToQuemSomos(element) {
+    const el = isElement(element)
+      ? element
+      : document.querySelector("#quem-somos");
+
+    smoothScrollToElement(el, {
+      duration: 500,
+      easingFunction: EASING_FUNCTIONS.fastInSlowOut,
+      offsetTop: -70,
+    });
+  }
+
+  $("a[href*=\\#]").on("click", function (event) {
+    const element = document.querySelector(this.hash);
+
+    if (element) {
+      event.preventDefault();
+      goToQuemSomos(element);
+      history.pushState(null, null, this.hash);
+    }
+  });
+
+  $(".scroll-down").on("click", goToQuemSomos);
+
+  document.addEventListener("DOMContentLoaded", function (event) {
+    if (!location.hash) return;
+
+    const element = document.querySelector(location.hash);
+    goToQuemSomos(element);
+  });
+</script>
 
 <!-- end custom bottom scripts -->

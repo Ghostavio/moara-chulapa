@@ -1,24 +1,23 @@
 ---
 layout: default
-title: Chulapa on remote
-header_type: hero
-subtitle: Starter pack
+title: Moara Exports
+header_type: splash
+header_img: assets/logo-moara-cor-1.png
+showhardcodedsubtitle: true
 ---
 
-Click [**Use this template**](https://github.com/dieghernan/chulapa-101/generate) button above for cloning this repo and get started with [Chulapa Jekyll theme](https://github.com/dieghernan/chulapa).
-
-Contains basic configuration to get you a site with:
-
-- Sample posts and [paginated blog index](./blog/).
-- Sample collection with Markdown and kramdown cheatsheets and [collection index](./cheatsheets).
-- Archive pages for posts grouped by year, category, and tag.
-- Demo page with the different Bootstrap components and how they look with the actual skin settings.
-- Sample 404 page.
-- Site search with Lunr.
-- Sample `_config` with minimal configuration. `primary` color is set to <span class="text-primary">LightSkyBlue</span> and `autothemer` is enabled. [Learn how to customize your site](https://dieghernan.github.io/chulapa/docs/03-theming).
-- Sample `algolia-search.yml` for using Algolia+GitHub Actions.
-- Sample files for extending the theme with your own scripts and css.
-
-On addition, `jekyll-sitemap` generates your sitemap on [./sitemap.xml](./sitemap.xml), and Chulapa generates an Atom feed on [./atom.xml](./atom.xml) and a RSS 2.0 feed on [./rss.xml](./rss.xml).
-
-[Configure as necessary](https://dieghernan.github.io/chulapa/docs/02-config) and replace sample content with your own.
+<div id="quem-somos" class="mt-4 mb-1">
+  <div class="top-img">
+    <h1>QUEM SOMOS</h1>
+    <figure>
+      <img src="assets/quem-somos1.jpg" />
+      <figcaption>2014 - FEIRA FIHAV, CUBA</figcaption>
+    </figure>
+  </div>
+  <ol class="bottom-text">
+    <li>Somos movidas pela cultura exportadora, relacionamento global, diversidade cultural, inteligência comercial e vendas internacionais.</li>
+    <li>Nossa história começou em 16/02/2016, focando inicialmente em produtos de linha branca. Com a experiência adquirida, expandimos para outros segmentos, incluindo produtos da agricultura familiar e acessórios femininos.</li>
+    <li>Trabalhamos em parceria com fornecedores brasileiros, conectando exportadores e importadores globalmente através de nossa rede de relacionamentos.</li>
+    <li>Nosso compromisso é fortalecer o comércio internacional, promovendo conexões duradouras e bem-sucedidas entre mercados ao redor do mundo.</li>
+  </ol>
+</div>
