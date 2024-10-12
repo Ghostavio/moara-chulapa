@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-10-12 14:58:56 -0300 -->
+    <!-- Page build 2024-10-12 19:44:01 -0300 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -179,7 +179,8 @@
    </header>
    </header>
 </header>
-<main class="container-lg pb-3 flex-fill">
+<main>
+ <section class="container-lg pb-3 flex-fill">
 <div class="row my-1">
 <div class="col-lg-5 offset-lg-2 col small">
  <nav aria-label="breadcrumb">
@@ -204,14 +205,15 @@
              <a  class="d-none d-sm-inline" href="https://api.whatsapp.com/send?&text=Urban+art%20http://localhost:4000/20181109_urban_art/" title="Share on Whatsapp" aria-label="Share on Whatsapp" ><i class="fab fa-whatsapp-square fa-lg" aria-hidden="true"></i></a>
          <a  class="d-none d-sm-inline" href="https://www.linkedin.com/shareArticle?url=http://localhost:4000/20181109_urban_art/&title=Urban+art" title="Share on LinkedIn" aria-label="Share on LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
          </div></div>
- <div class="row">
-   <article id="maincontent" class="col-lg-12 e-content">
-      <p>Urban artists can use anything as a canvas to express their art</p>
+   <div class="row">
+     <article id="maincontent" class="col-lg-12 e-content">
+        <p>Urban artists can use anything as a canvas to express their art</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Madrid_-_Graffiti_11.jpg/407px-Madrid_-_Graffiti_11.jpg" alt="Grunge is not dead" /></p>
 <p class="caption">Picture by <a href="https://commons.m.wikimedia.org/wiki/User:Zarateman">Zarateman</a></p>
-   </article>
- </div>
-</main><nav aria-label="Navigation" class="container-lg chulapa-pagination  ">
+     </article>
+   </div>
+ </section>
+ </main><nav aria-label="Navigation" class="container-lg chulapa-pagination  ">
  <ul class="col-lg-8 offset-lg-2 pagination chulapa-pagination-round px-0 ">
    <li class="page-item text-left mr-0 ">
       <a class="page-link border-0 px-4" href="http://localhost:4000/20150226_flake-it-till-you-make-it/" tabindex="-1">
@@ -339,14 +341,14 @@
     let distanceToElement =
       document.getElementById("somos-brasilidade").getBoundingClientRect().top -
       window.innerHeight;
-    if (distanceToElement < 0 && window.innerWidth > 768) {
+    if (distanceToElement < 0 && window.innerWidth >= 768) {
       if (scrollLock) {
-        if (window.innerWidth < 1070 && distanceToElement < -660) return;
-        if (window.innerWidth < 820 && distanceToElement < -430) return;
+        if (window.innerWidth < 1070 && distanceToElement <= -660) return;
+        if (window.innerWidth < 820 && distanceToElement <= -430) return;
       } else {
-        if (window.innerWidth < 1070 && distanceToElement < -660)
+        if (window.innerWidth < 1070 && distanceToElement <= -660)
           distanceToElement = -660;
-        if (window.innerWidth < 820 && distanceToElement < -430)
+        if (window.innerWidth < 820 && distanceToElement <= -430)
           distanceToElement = -430;
       }
       const translationRate = window.innerWidth < 880 ? 0.125 : 0.08;

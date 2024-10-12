@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-10-12 14:58:56 -0300 -->
+    <!-- Page build 2024-10-12 19:44:01 -0300 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Markdown cheatsheet",
       "image": "https://github.com/Ghostavio.png",
-      "datePublished": "2024-10-12T14:58:56-03:00",
-      "dateModified": "2024-10-12T14:58:56-03:00",
+      "datePublished": "2024-10-12T19:44:01-03:00",
+      "dateModified": "2024-10-12T19:44:01-03:00",
       "author": {
         "@type": "Person",
         "name": "Moara Exports"
@@ -156,7 +156,8 @@
      </div>
    </header></header>
 </header>
-<main class="container-lg pb-3 flex-fill">
+<main>
+ <section class="container-lg pb-3 flex-fill">
 <div class="row my-1">
 <div class="col-lg-5 offset-lg-2 col small">
  <nav aria-label="breadcrumb">
@@ -179,9 +180,9 @@
              <a  class="d-none d-sm-inline" href="https://api.whatsapp.com/send?&text=Markdown+cheatsheet%20http://localhost:4000/cheatsheets/01-markdown-cheat-sheet" title="Share on Whatsapp" aria-label="Share on Whatsapp" ><i class="fab fa-whatsapp-square fa-lg" aria-hidden="true"></i></a>
          <a  class="d-none d-sm-inline" href="https://www.linkedin.com/shareArticle?url=http://localhost:4000/cheatsheets/01-markdown-cheat-sheet&title=Markdown+cheatsheet" title="Share on LinkedIn" aria-label="Share on LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
          </div></div>
- <div class="row">
-   <article id="maincontent" class="col-lg-12 e-content">
-      <h2 id="whats-markdown">What’s Markdown?</h2>
+   <div class="row">
+     <article id="maincontent" class="col-lg-12 e-content">
+        <h2 id="whats-markdown">What’s Markdown?</h2>
 <p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by <a href="https://daringfireball.net/projects/markdown/">John Gruber</a> in 2004, Markdown is now one of the world’s most popular markup languages.</p>
 <p><a href="https://www.markdownguide.org/basic-syntax/">https://www.markdownguide.org/basic-syntax/</a></p>
 <h2 id="markdown-cheatsheet">Markdown cheatsheet</h2>
@@ -485,9 +486,10 @@ Another
    </li>
  </ol>
 </div>
-   </article>
- </div>
-</main><nav aria-label="Navigation" class="container-lg chulapa-pagination  ">
+     </article>
+   </div>
+ </section>
+ </main><nav aria-label="Navigation" class="container-lg chulapa-pagination  ">
  <ul class="col-lg-8 offset-lg-2 pagination chulapa-pagination-round px-0 ">
    <li class="page-item text-left mr-0 invisible">
       <a class="page-link border-0 px-4" href="#" tabindex="-1">
@@ -572,14 +574,14 @@ Another
     let distanceToElement =
       document.getElementById("somos-brasilidade").getBoundingClientRect().top -
       window.innerHeight;
-    if (distanceToElement < 0 && window.innerWidth > 768) {
+    if (distanceToElement < 0 && window.innerWidth >= 768) {
       if (scrollLock) {
-        if (window.innerWidth < 1070 && distanceToElement < -660) return;
-        if (window.innerWidth < 820 && distanceToElement < -430) return;
+        if (window.innerWidth < 1070 && distanceToElement <= -660) return;
+        if (window.innerWidth < 820 && distanceToElement <= -430) return;
       } else {
-        if (window.innerWidth < 1070 && distanceToElement < -660)
+        if (window.innerWidth < 1070 && distanceToElement <= -660)
           distanceToElement = -660;
-        if (window.innerWidth < 820 && distanceToElement < -430)
+        if (window.innerWidth < 820 && distanceToElement <= -430)
           distanceToElement = -430;
       }
       const translationRate = window.innerWidth < 880 ? 0.125 : 0.08;

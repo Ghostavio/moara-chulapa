@@ -45,6 +45,13 @@ h1 {
   line-height: 1;
 }
 
+.fab:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+
 @media (min-width: 992px) {
   .container,
   .container-sm,
@@ -196,7 +203,7 @@ h1 {
       object-fit: cover;
       width: 100vw;
       height: 100vh;
-      margin-top: -40%;
+      margin-top: -50%;
     }
   }
 
@@ -228,11 +235,130 @@ h1 {
   }
 }
 
+#lideranca-protagonismo {
+  background-color: #7f1710;
+  padding: 2rem 0;
+  overflow: hidden;
+
+  > div {
+    position: relative;
+  }
+
+  .logo-background {
+    position: absolute;
+    top: -180px;
+    left: 3rem;
+    width: 260px;
+    display: none;
+  }
+
+  .texto {
+    align-self: center;
+    margin-right: 0;
+
+    h1,
+    p {
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .imagens {
+    flex-wrap: wrap;
+  }
+
+  .cartao {
+    &:last-of-type {
+      margin-top: 1rem;
+    }
+
+    img {
+      border-radius: 18% 18% 0 0;
+    }
+
+    .cartao-texto {
+      position: relative;
+      background-color: #fff;
+      border-radius: 0 0 20px 20px;
+      padding-bottom: 2.5rem !important;
+      height: 150px;
+
+      h2 {
+        color: #7f1710;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-top: 0;
+      }
+
+      p {
+        color: #000;
+        font-size: 1rem;
+      }
+
+      a {
+        color: #007ab9;
+        position: absolute;
+        right: 0.75rem;
+        bottom: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 431px) {
+  #somos-brasilidade {
+    figure {
+      img {
+        margin-top: -40%;
+      }
+    }
+  }
+
+  #lideranca-protagonismo {
+    .imagens {
+      flex-wrap: nowrap;
+    }
+
+    .cartao {
+      &:last-of-type {
+        margin-top: 0;
+      }
+      .cartao-texto {
+        height: 180px;
+      }
+    }
+  }
+}
+
 @media (min-width: 500px) {
   #somos-brasilidade {
     .texto {
       h1 {
         font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  #lideranca-protagonismo {
+    .cartao {
+      .cartao-texto {
+        h2 {
+          font-size: 1.25rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -321,6 +447,7 @@ h1 {
     padding: 0 50px 20px 0;
     width: 50%;
   }
+
   #somos-brasilidade {
     .texto {
       justify-content: end;
@@ -332,6 +459,18 @@ h1 {
 
     .logo-parallax {
       display: block;
+    }
+  }
+
+  #lideranca-protagonismo {
+    padding: 3rem 0;
+
+    .logo-background {
+      display: block;
+    }
+
+    .texto {
+      margin-right: 0.85rem;
     }
   }
 }
@@ -360,12 +499,49 @@ h1 {
       }
     }
   }
+
+  #lideranca-protagonismo {
+    .texto {
+      margin-right: 1.5rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 915px) {
   #somos-brasilidade {
     figure img {
       max-height: 650px;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  #lideranca-protagonismo {
+    .texto {
+      h1 {
+        font-size: 3.25rem;
+      }
+    }
+
+    .cartao {
+      .cartao-texto {
+        h2 {
+          font-size: 1.3rem;
+        }
+
+        a {
+          right: 1rem;
+          bottom: 1rem;
+        }
+      }
     }
   }
 }
@@ -407,6 +583,20 @@ h1 {
       width: 250px;
     }
   }
+
+  #lideranca-protagonismo {
+    .texto {
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+
+    .cartao .cartao-texto {
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 1120px) {
@@ -419,6 +609,16 @@ h1 {
 
     .logo-parallax {
       width: 270px;
+    }
+  }
+
+  #lideranca-protagonismo .cartao .cartao-texto {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
     }
   }
 }

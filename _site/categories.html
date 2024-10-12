@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-10-12 14:58:56 -0300 -->
+    <!-- Page build 2024-10-12 19:44:01 -0300 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Categories",
       "image": "https://github.com/Ghostavio.png",
-      "datePublished": "2024-10-12T14:58:56-03:00",
-      "dateModified": "2024-10-12T14:58:56-03:00",
+      "datePublished": "2024-10-12T19:44:01-03:00",
+      "dateModified": "2024-10-12T19:44:01-03:00",
       "author": {
         "@type": "Person",
         "name": "Moara Exports"
@@ -158,7 +158,8 @@
      </div>
    </header></header>
 </header>
-<main class="container-lg pb-3 flex-fill">
+<main>
+ <section class="container-lg pb-3 flex-fill">
 <div class="row my-1">
 <div class="col-lg-8 offset-lg-2 col small">
  <nav aria-label="breadcrumb">
@@ -174,8 +175,8 @@
  </ol>
  </nav>
  </div></div>
- <div class="row">
-   <article id="maincontent" class="col-lg-12 e-content">
+   <div class="row">
+     <article id="maincontent" class="col-lg-12 e-content">
 <div class="row g-0 pt-5" id="categories">
 <div class="col"><a href="#picture" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(3rem - 2rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>picture<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">3</span></a><a href="#tutorial" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(2rem - 2rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>tutorial<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">2</span></a><a href="#landing-page" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(1rem - 2rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>landing-page<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">1</span></a><a href="#skins" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(1rem - 2rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>skins<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">1</span></a></div>
 </div>
@@ -226,7 +227,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0 h-entry">
    <div class="col">
      <h6><a href="http://localhost:4000/cheatsheets/01-markdown-cheat-sheet" class="p-name u-url">Markdown cheatsheet</a></h6><p>The basic syntax of your page</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time class="dt-published" datetime="2024-10-12T14:58:56-03:00">october 12, 2024</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time class="dt-published" datetime="2024-10-12T19:44:01-03:00">october 12, 2024</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> 3’<span class="ml-2 badge chulapa-pill-bg-body p-category">cheatsheet</span></div>
    </div>
@@ -234,7 +235,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0 h-entry">
    <div class="col">
      <h6><a href="http://localhost:4000/cheatsheets/02-kramdown-cheat-sheet" class="p-name u-url">kramdown cheatsheet</a></h6><p>Beyond Markdown</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time class="dt-published" datetime="2024-10-12T14:58:56-03:00">october 12, 2024</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time class="dt-published" datetime="2024-10-12T19:44:01-03:00">october 12, 2024</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> 2’<span class="ml-2 badge chulapa-pill-bg-body p-category">cheatsheet</span></div>
    </div>
@@ -281,9 +282,10 @@
       <a href="#categories" class="btn btn-lg border-0 chulapa-text-body-color"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i><span class="sr-only">Top</span></a>
  </div>
 </section>
-   </article>
- </div>
-</main><!-- Footer -->
+     </article>
+   </div>
+ </section>
+ </main><!-- Footer -->
 <footer class="footer-chulapa text-center mt-0 pt-3">
  <div class="container">
    <div class="row">
@@ -340,14 +342,14 @@
     let distanceToElement =
       document.getElementById("somos-brasilidade").getBoundingClientRect().top -
       window.innerHeight;
-    if (distanceToElement < 0 && window.innerWidth > 768) {
+    if (distanceToElement < 0 && window.innerWidth >= 768) {
       if (scrollLock) {
-        if (window.innerWidth < 1070 && distanceToElement < -660) return;
-        if (window.innerWidth < 820 && distanceToElement < -430) return;
+        if (window.innerWidth < 1070 && distanceToElement <= -660) return;
+        if (window.innerWidth < 820 && distanceToElement <= -430) return;
       } else {
-        if (window.innerWidth < 1070 && distanceToElement < -660)
+        if (window.innerWidth < 1070 && distanceToElement <= -660)
           distanceToElement = -660;
-        if (window.innerWidth < 820 && distanceToElement < -430)
+        if (window.innerWidth < 820 && distanceToElement <= -430)
           distanceToElement = -430;
       }
       const translationRate = window.innerWidth < 880 ? 0.125 : 0.08;

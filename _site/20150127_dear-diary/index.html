@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-10-12 14:58:56 -0300 -->
+    <!-- Page build 2024-10-12 19:44:01 -0300 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -162,7 +162,8 @@
    </header>
    </header>
 </header>
-<main class="container-lg pb-3 flex-fill">
+<main>
+ <section class="container-lg pb-3 flex-fill">
 <div class="row my-1">
 <div class="col-lg-5 offset-lg-2 col small">
  <nav aria-label="breadcrumb">
@@ -187,12 +188,13 @@
              <a  class="d-none d-sm-inline" href="https://api.whatsapp.com/send?&text=Dear+diary%20http://localhost:4000/20150127_dear-diary/" title="Share on Whatsapp" aria-label="Share on Whatsapp" ><i class="fab fa-whatsapp-square fa-lg" aria-hidden="true"></i></a>
          <a  class="d-none d-sm-inline" href="https://www.linkedin.com/shareArticle?url=http://localhost:4000/20150127_dear-diary/&title=Dear+diary" title="Share on LinkedIn" aria-label="Share on LinkedIn"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
          </div></div>
- <div class="row">
-   <article id="maincontent" class="col-lg-12 e-content">
-      <p>What is it with that Mary girl?  Dragging me to school every day. As if I had a choice.  What you don’t hear in those nursery rhymes is that she starves me if I don’t go to school with her; it’s the only way I can stay alive!  I’m thinking about being adopted by Little Bo Peep, sure I may get lost, but anything is better than being with Mary and those little brats at school (shudder, shudder).</p>
-   </article>
- </div>
-</main><nav aria-label="Navigation" class="container-lg chulapa-pagination  ">
+   <div class="row">
+     <article id="maincontent" class="col-lg-12 e-content">
+        <p>What is it with that Mary girl?  Dragging me to school every day. As if I had a choice.  What you don’t hear in those nursery rhymes is that she starves me if I don’t go to school with her; it’s the only way I can stay alive!  I’m thinking about being adopted by Little Bo Peep, sure I may get lost, but anything is better than being with Mary and those little brats at school (shudder, shudder).</p>
+     </article>
+   </div>
+ </section>
+ </main><nav aria-label="Navigation" class="container-lg chulapa-pagination  ">
  <ul class="col-lg-8 offset-lg-2 pagination chulapa-pagination-round px-0 ">
    <li class="page-item text-left mr-0 ">
       <a class="page-link border-0 px-4" href="http://localhost:4000/20150119_soccer/" tabindex="-1">
@@ -304,14 +306,14 @@
     let distanceToElement =
       document.getElementById("somos-brasilidade").getBoundingClientRect().top -
       window.innerHeight;
-    if (distanceToElement < 0 && window.innerWidth > 768) {
+    if (distanceToElement < 0 && window.innerWidth >= 768) {
       if (scrollLock) {
-        if (window.innerWidth < 1070 && distanceToElement < -660) return;
-        if (window.innerWidth < 820 && distanceToElement < -430) return;
+        if (window.innerWidth < 1070 && distanceToElement <= -660) return;
+        if (window.innerWidth < 820 && distanceToElement <= -430) return;
       } else {
-        if (window.innerWidth < 1070 && distanceToElement < -660)
+        if (window.innerWidth < 1070 && distanceToElement <= -660)
           distanceToElement = -660;
-        if (window.innerWidth < 820 && distanceToElement < -430)
+        if (window.innerWidth < 820 && distanceToElement <= -430)
           distanceToElement = -430;
       }
       const translationRate = window.innerWidth < 880 ? 0.125 : 0.08;

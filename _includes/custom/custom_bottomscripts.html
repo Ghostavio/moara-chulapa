@@ -27,14 +27,14 @@
       document.getElementById("somos-brasilidade").getBoundingClientRect().top -
       window.innerHeight;
 
-    if (distanceToElement < 0 && window.innerWidth > 768) {
+    if (distanceToElement < 0 && window.innerWidth >= 768) {
       if (scrollLock) {
-        if (window.innerWidth < 1070 && distanceToElement < -660) return;
-        if (window.innerWidth < 820 && distanceToElement < -430) return;
+        if (window.innerWidth < 1070 && distanceToElement <= -660) return;
+        if (window.innerWidth < 820 && distanceToElement <= -430) return;
       } else {
-        if (window.innerWidth < 1070 && distanceToElement < -660)
+        if (window.innerWidth < 1070 && distanceToElement <= -660)
           distanceToElement = -660;
-        if (window.innerWidth < 820 && distanceToElement < -430)
+        if (window.innerWidth < 820 && distanceToElement <= -430)
           distanceToElement = -430;
       }
 
