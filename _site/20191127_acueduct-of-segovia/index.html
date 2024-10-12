@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-10-04 22:35:13 -0300 -->
+    <!-- Page build 2024-10-12 14:58:56 -0300 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -129,7 +129,15 @@
   <link id="csshigh" rel="stylesheet" href="http://localhost:4000/assets/css/highlighter.css" >
     <!-- Custom css -->
   <link rel="stylesheet" href="http://localhost:4000/assets/css/custom.css" >
-      <!-- start custom head snippets -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150793044-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-150793044-1');
+</script>
+<!-- start custom head snippets -->
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- end custom head snippets -->
 </head>
@@ -329,6 +337,33 @@
       offsetTop: -70,
     });
   }
+  function logoParallax(event) {
+    const scrollLock =
+      event && (event.type === "scroll" || event.type === "touchmove");
+    const initialRotation = 30;
+    const initialTranslation = -85;
+    let distanceToElement =
+      document.getElementById("somos-brasilidade").getBoundingClientRect().top -
+      window.innerHeight;
+    if (distanceToElement < 0 && window.innerWidth > 768) {
+      if (scrollLock) {
+        if (window.innerWidth < 1070 && distanceToElement < -660) return;
+        if (window.innerWidth < 820 && distanceToElement < -430) return;
+      } else {
+        if (window.innerWidth < 1070 && distanceToElement < -660)
+          distanceToElement = -660;
+        if (window.innerWidth < 820 && distanceToElement < -430)
+          distanceToElement = -430;
+      }
+      const translationRate = window.innerWidth < 880 ? 0.125 : 0.08;
+      const rotation = initialRotation + distanceToElement * 0.025;
+      const translation =
+        initialTranslation - distanceToElement * translationRate;
+      $(".logo-parallax").css({
+        transform: `rotate(${rotation}deg) translate(0, ${translation}px)`,
+      });
+    }
+  }
   $("a[href*=\\#]").on("click", function (event) {
     const element = document.querySelector(this.hash);
     if (element) {
@@ -339,10 +374,14 @@
   });
   $(".scroll-down").on("click", goToQuemSomos);
   document.addEventListener("DOMContentLoaded", function (event) {
+    logoParallax();
     if (!location.hash) return;
     const element = document.querySelector(location.hash);
     goToQuemSomos(element);
   });
+  $(window).scroll(logoParallax);
+  $(window).on("touchmove", logoParallax);
+  $(window).resize(logoParallax);
 </script>
 <!-- end custom bottom scripts -->
 	</body>
