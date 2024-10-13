@@ -96,8 +96,8 @@ h1 {
 
 .splash-chulapa-image {
   background-color: #7f1710;
-  background-position-y: center;
-  background-size: 120%;
+  background-size: 110%;
+  background-position: center;
   margin-top: -25px;
 
   h1,
@@ -127,22 +127,6 @@ h1 {
 .splash-chulapa p,
 .splash-chulapa-image p {
   font-size: 1rem;
-}
-
-@media (min-width: 768px) {
-  .splash-chulapa-image {
-    background-size: contain;
-    margin-top: -50px;
-
-    .chulapa-subtitle {
-      bottom: 20px;
-    }
-  }
-
-  .splash-chulapa p,
-  .splash-chulapa-image p {
-    font-size: 1.5rem;
-  }
 }
 
 .cta_wpp {
@@ -178,15 +162,18 @@ h1 {
   .wspMob {
     display: block;
   }
+
   .wspDesk {
     display: none;
   }
+
   .cta_wpp {
     transform: initial;
     width: 14vw;
     height: 10vw;
     right: 0;
   }
+
   .cta_wpp:after {
     width: 5vw;
     height: 5vw;
@@ -398,6 +385,15 @@ h1 {
 }
 
 @media (min-width: 500px) {
+  .splash-chulapa-image {
+    background-size: 100%;
+    // margin-top: -60px;
+
+    // .chulapa-subtitle {
+    //   bottom: 10px;
+    // }
+  }
+
   #somos-brasilidade {
     .texto {
       h1 {
@@ -502,6 +498,21 @@ h1 {
 }
 
 @media (min-width: 768px) {
+  .splash-chulapa-image {
+    background-size: contain;
+    background-position: center -25px;
+    margin-top: -40px;
+
+    .chulapa-subtitle {
+      bottom: 20px;
+    }
+  }
+
+  .splash-chulapa p,
+  .splash-chulapa-image p {
+    font-size: 1.5rem;
+  }
+
   #quem-somos .bottom-text li {
     padding: 0 50px 20px 0;
     width: 50%;

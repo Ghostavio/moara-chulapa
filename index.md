@@ -2,7 +2,7 @@
 layout: default
 title: Moara Exports
 header_type: splash
-header_img: assets/logo-moara-cor-1.png
+header_img: assets/logo-moara-cor-1.webp
 showhardcodedsubtitle: true
 showliderancaprotagonismo: true
 excerpt: Conectando a essência brasileira ao mercado global
@@ -12,7 +12,7 @@ excerpt: Conectando a essência brasileira ao mercado global
   <div class="top-img">
     <h1>QUEM SOMOS</h1>
     <figure>
-      <img src="assets/quem-somos1.jpg" alt="2014 - FEIRA FIHAV, CUBA" />
+      <img src="assets/quem-somos1.webp" alt="2014 - FEIRA FIHAV, CUBA" />
       <figcaption>2014 - FEIRA FIHAV, CUBA</figcaption>
     </figure>
 
