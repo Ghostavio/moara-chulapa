@@ -38,5 +38,5 @@ excerpt: Conectando a essência brasileira ao mercado global
 
   </div>
 
-  <img src="assets/moara-brasao.png" class="logo-parallax" />
+  <img src="assets/moara-brasao.png" class="logo-parallax" alt="moara exports" />
 </section>
