@@ -145,6 +145,56 @@ h1 {
   }
 }
 
+.cta_wpp {
+  position: fixed;
+  padding-left: 0.5vw;
+  right: -2vw;
+  top: 50%;
+  transform: translateX(-50%);
+  background-color: #5cf063;
+  z-index: 9999;
+  width: 4vw;
+  height: 2vw;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -webkit-animation: cta_wpp 10s;
+  -moz-animation: cta_wpp 10s;
+  -o-animation: cta_wpp 10s;
+  animation: cta_wpp 10s;
+}
+
+.cta_wpp:after {
+  content: "";
+  background-image: url("../whatsapp-logo.png");
+  width: 1.2vw;
+  background-size: cover;
+  height: 1.2vw;
+  position: absolute;
+  z-index: 99;
+  top: 0.4vw;
+}
+
+@media (max-width: 768px) {
+  .wspMob {
+    display: block;
+  }
+  .wspDesk {
+    display: none;
+  }
+  .cta_wpp {
+    transform: initial;
+    width: 14vw;
+    height: 10vw;
+    right: 0;
+  }
+  .cta_wpp:after {
+    width: 5vw;
+    height: 5vw;
+    top: 2.5vw;
+    right: 6vw;
+  }
+}
+
 #quem-somos {
   .top-img {
     display: flex;
