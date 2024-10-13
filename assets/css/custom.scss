@@ -269,12 +269,13 @@ h1 {
 
   .imagens {
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .cartao {
     margin-left: 0;
     margin-right: 0;
-    min-width: calc(50% - 1rem);
+    min-width: calc(50% - 0.5rem);
 
     &:last-of-type {
       margin-top: 1rem;
