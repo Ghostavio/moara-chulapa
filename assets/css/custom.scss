@@ -237,19 +237,15 @@ h1 {
 
 #lideranca-protagonismo {
   background-color: #7f1710;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 11% -117px;
+  background-size: 230px;
   padding: 2rem 0;
   overflow: hidden;
 
   > div {
     position: relative;
-  }
-
-  .logo-background {
-    position: absolute;
-    top: -180px;
-    left: 3rem;
-    width: 260px;
-    display: none;
   }
 
   .texto {
@@ -276,12 +272,18 @@ h1 {
   }
 
   .cartao {
+    margin-left: 0;
+    margin-right: 0;
+    min-width: calc(50% - 1rem);
+
     &:last-of-type {
       margin-top: 1rem;
     }
 
     img {
       border-radius: 18% 18% 0 0;
+      margin: 0;
+      width: 100%;
     }
 
     .cartao-texto {
@@ -328,9 +330,15 @@ h1 {
     }
 
     .cartao {
+      &:first-of-type {
+        margin-right: 0.5rem;
+      }
+
       &:last-of-type {
         margin-top: 0;
+        margin-left: 0.5rem;
       }
+
       .cartao-texto {
         height: 180px;
       }
@@ -463,11 +471,8 @@ h1 {
   }
 
   #lideranca-protagonismo {
+    background-image: url("../moara-brasao.png");
     padding: 3rem 0;
-
-    .logo-background {
-      display: block;
-    }
 
     .texto {
       margin-right: 0.85rem;
@@ -525,6 +530,9 @@ h1 {
 
 @media (min-width: 960px) {
   #lideranca-protagonismo {
+    background-position: 15% -132px;
+    background-size: 260px;
+
     .texto {
       h1 {
         font-size: 3.25rem;
