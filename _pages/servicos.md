@@ -15,7 +15,7 @@ permalink: /servicos/
       <p>Com uma equipe altamente qualificada para entender as necessidades dos exportadores brasileiros e importadores de diversos países, possuímos o potencial de representar e assessorar a internacionalização de empresas.<br /><strong>Nossos serviços incluem:</strong></p>
     </div>
   </div>
-  <div class="caixa-direita ml-4">
+  <div class="caixa-direita ml-md-4 ml-0">
     <h2>REPRESENTAÇÃO COMERCIAL INTERNACIONAL</h2>
     <div class="d-flex">
       <ul>

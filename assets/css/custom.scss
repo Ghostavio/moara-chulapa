@@ -416,7 +416,10 @@ h1 {
           content: "";
           width: 1px;
           background-color: #fff;
+          height: -moz-available;
           height: -webkit-fill-available;
+          height: fill-available;
+          max-height: 100%;
           display: block;
           position: absolute;
           margin-left: -15px;
