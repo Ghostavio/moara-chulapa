@@ -523,10 +523,9 @@ h1 {
       margin-top: 1.5rem;
       margin-left: 0 !important;
 
-      // ul li.no-bullet {
-      //   display: flex;
-      //   justify-content: end;
-      // }
+      ul {
+        margin-top: 1rem;
+      }
     }
   }
 }
@@ -793,6 +792,10 @@ h1 {
         h2 {
           font-size: 2rem;
         }
+
+        ul {
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -1003,9 +1006,14 @@ h1 {
 
     .caixa-direita {
       margin-left: 1.5rem !important;
+      margin-top: 0;
 
       h2 {
         font-size: 1.75rem;
+      }
+
+      ul {
+        margin-top: 1.5rem;
       }
     }
   }
