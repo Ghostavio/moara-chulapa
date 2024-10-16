@@ -100,11 +100,11 @@ navbar:
     - title: Quem Somos # Label
       url: /#quem-somos # url
     - title: Serviços Oferecidos
-      url: /servicos/
+      url: /servicos
     - title: Parceiros
-      url: /parceiros/
+      url: /parceiros
     - title: Contato
-      url: /contato/
+      url: /contato
 #  - title   : # Label submenu
 #    child:
 #    - title: # Child label
