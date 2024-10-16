@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-10-14 15:41:07 -0300 -->
+    <!-- Page build 2024-10-16 11:19:40 -0300 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -315,7 +315,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
 	<!-- start custom scripts to be placed at the bottom of the page -->
-<script src="assets/js/sliding-scroll.min.js"></script>
+<script src="/assets/js/sliding-scroll.min.js"></script>
 <script>
   function isElement(element) {
     return element instanceof Element || element instanceof HTMLDocument;
@@ -331,13 +331,14 @@
     });
   }
   function logoParallax(event) {
+    const element = document.getElementById("somos-brasilidade");
+    if (!element) return;
     const scrollLock =
       event && (event.type === "scroll" || event.type === "touchmove");
     const initialRotation = 30;
     const initialTranslation = -85;
     let distanceToElement =
-      document.getElementById("somos-brasilidade").getBoundingClientRect().top -
-      window.innerHeight;
+      element.getBoundingClientRect().top - window.innerHeight;
     if (distanceToElement < 0 && window.innerWidth >= 768) {
       if (scrollLock) {
         if (window.innerWidth < 1070 && distanceToElement <= -660) return;

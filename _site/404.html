@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2024-10-14 15:41:07 -0300 -->
+    <!-- Page build 2024-10-16 11:19:40 -0300 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "404",
       "image": "https://github.com/Ghostavio.png",
-      "datePublished": "2024-10-14T15:41:07-03:00",
-      "dateModified": "2024-10-14T15:41:07-03:00",
+      "datePublished": "2024-10-16T11:19:40-03:00",
+      "dateModified": "2024-10-16T11:19:40-03:00",
       "author": {
         "@type": "Person",
         "name": "Moara Exports"
@@ -55,7 +55,7 @@
     "@context": "http://schema.org",
     "@type": "WebPage",
     "name": "404",
-    "description": "Page not found - "
+    "description": "Página não encontrada - "
     }
 }
 </script><script type="application/ld+json">
@@ -81,7 +81,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <meta name="author" content="Moara Exports" >
    <meta name="copyright" content="Moara Exports" >
-   <meta name="description" content="Page not found - ">
+   <meta name="description" content="Página não encontrada - ">
    <meta name="thumbnail" content="https://github.com/Ghostavio.png" >
    <meta name="robots" content="index, follow"><meta name="keywords" content="">
     <!-- Chrome, Firefox OS and Opera -->
@@ -91,7 +91,7 @@
    <meta property="og:site_name" content="Moara Exports | Do Brasil pro mundo" >
    <meta property="og:url" content="http://localhost:4000/404.html" >
    <meta property="og:type" content="website" >
-   <meta property="og:description" content="Page not found - " >
+   <meta property="og:description" content="Página não encontrada - " >
    <meta property="og:locale" content="pt-BR" >
    <meta property="og:image" content="https://github.com/Ghostavio.png" >
     <!-- Twitter/X Cards -->
@@ -164,7 +164,7 @@
 			</div></div>
 </nav><div class="my-auto text-center">
   <h1 class="display-1 font-weight-bold">4<i class="fa fa-times-circle"></i>4</h1>
-  <h2>Page not found</h2>
+  <h2>Página não encontrada</h2>
   <h4 class="pt-5"><a class="nav-link" href="http://localhost:4000/search">Search <i class="fa fa-search" aria-hidden="true"></i></a></h4>
 </div>
 <!-- Footer -->
@@ -201,7 +201,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
 	<!-- start custom scripts to be placed at the bottom of the page -->
-<script src="assets/js/sliding-scroll.min.js"></script>
+<script src="/assets/js/sliding-scroll.min.js"></script>
 <script>
   function isElement(element) {
     return element instanceof Element || element instanceof HTMLDocument;
@@ -217,13 +217,14 @@
     });
   }
   function logoParallax(event) {
+    const element = document.getElementById("somos-brasilidade");
+    if (!element) return;
     const scrollLock =
       event && (event.type === "scroll" || event.type === "touchmove");
     const initialRotation = 30;
     const initialTranslation = -85;
     let distanceToElement =
-      document.getElementById("somos-brasilidade").getBoundingClientRect().top -
-      window.innerHeight;
+      element.getBoundingClientRect().top - window.innerHeight;
     if (distanceToElement < 0 && window.innerWidth >= 768) {
       if (scrollLock) {
         if (window.innerWidth < 1070 && distanceToElement <= -660) return;

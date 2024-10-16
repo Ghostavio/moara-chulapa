@@ -10,13 +10,8 @@ var els = main.querySelectorAll("pre");
 var iDiv = document.createElement("div");
 if (sT) {
   btn.style.marginLeft = "0";
-  iDiv.classList.add(
-    "bs-canvas-overlay",
-    "bg-dark",
-    "position-fixed",
-    "w-100",
-    "h-100"
-  );
+  iDiv.classList.add("bs-canvas-overlay", "bg-dark", "position-fixed",
+    "w-100", "h-100");
   iDiv.setAttribute("id", "sideBarOverlay");
   iDiv.setAttribute("onclick", "closeSideBar()");
   body.prepend(iDiv);
@@ -24,19 +19,24 @@ if (sT) {
   // ToC was requested but no toc produced
   // Clean up DOM
   btn.remove();
-  document.getElementById("sideBar").remove();
+  document.getElementById("sideBar")
+    .remove();
 }
 
 function openSideBar() {
   btn.removeAttribute("style");
   btn.setAttribute("aria-expanded", "true");
-  document.getElementById("sideBarOverlay").classList.add("show");
-  document.getElementById("sideBar").style.marginLeft = "0";
+  document.getElementById("sideBarOverlay")
+    .classList.add("show");
+  document.getElementById("sideBar")
+    .style.marginLeft = "0";
 }
 
 function closeSideBar() {
-  document.getElementById("sideBar").removeAttribute("style");
-  document.getElementById("sideBarOverlay").classList.remove("show");
+  document.getElementById("sideBar")
+    .removeAttribute("style");
+  document.getElementById("sideBarOverlay")
+    .classList.remove("show");
   btn.style.marginLeft = "0";
   btn.setAttribute("aria-expanded", "false");
 }
@@ -49,7 +49,8 @@ heads.forEach(function (currentValue) {
     anchor = document.createElement("a");
     sp = document.createElement("span");
     ic = document.createElement("i");
-    anchor.classList.add("chulapa-header-link", "ml-2", "chulapaDateSocial");
+    anchor.classList.add("chulapa-header-link", "ml-2",
+      "chulapaDateSocial");
     anchor.href = "#" + id;
     sp.innerHTML = "Permalink";
     sp.classList.add("sr-only");
@@ -57,6 +58,9 @@ heads.forEach(function (currentValue) {
     anchor.append(sp, ic);
     anchor.title = "Permalink";
     thish.append(anchor);
+  } else {
+    console.log("Heading :" + thish.innerHTML +
+      " does not have id. Can't place anchor here");
   }
 });
 
@@ -72,7 +76,7 @@ els.forEach(function (currentValue, currentIndex) {
   if (codeBlock.tagName.toLowerCase() == "code") {
     // Add br is no native
     hashigh = preBlock.classList.contains("highlight");
-    if (hashigh === false) {
+    if (hashigh === false){
       preBlock.classList.add("highlight");
       brk = document.createElement("br");
       codeBlock.prepend(brk);
@@ -81,12 +85,8 @@ els.forEach(function (currentValue, currentIndex) {
     codeBlock.setAttribute("id", "clipboard_code" + i);
     // Create button
     copybtn = document.createElement("button");
-    copybtn.classList.add(
-      "btn",
-      "text-muted",
-      "btn-sm",
-      "btn-chulapa-copy-code"
-    );
+    copybtn.classList.add("btn", "text-muted", "btn-sm",
+      "btn-chulapa-copy-code");
     copybtn.innerHTML = "<i class='far fa-copy'></i>";
     copybtn.id = "clipboard_btn" + i;
     copybtn.type = "button";
@@ -96,16 +96,22 @@ els.forEach(function (currentValue, currentIndex) {
     //Function to copy to clipboard
     copybtn.onclick = ch_copy_cliboard(i);
     preBlock.prepend(copybtn);
+  } else {
+    console.log("No code block for\n" + preBlock.innerHTML);
   }
+
 });
 
 // Initialize Bootstrap tooltip
 $(function () {
-  $("[data-toggle='tooltip']").tooltip();
-});
+  $("[data-toggle='tooltip']")
+    .tooltip();
+})
 
 function showTooltip(thisbtn, message) {
-  thisbtn.tooltip("hide").attr("data-original-title", message).tooltip("show");
+  thisbtn.tooltip("hide")
+    .attr("data-original-title", message)
+    .tooltip("show");
 }
 
 function hideTooltip(thisbtn) {
@@ -115,7 +121,7 @@ function hideTooltip(thisbtn) {
 }
 
 function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function setTooltip(thisbtn, tooltip, style) {
@@ -132,7 +138,8 @@ async function setTooltip(thisbtn, tooltip, style) {
 function ch_copy_cliboard(i) {
   return function () {
     // Select code content and strip HTML
-    let thisCodeBlock = document.getElementById("clipboard_code" + i).innerHTML;
+    let thisCodeBlock = document.getElementById("clipboard_code" + i)
+      .innerHTML;
     codeBlockStripped = stripHtml(thisCodeBlock);
 
     // Reset clipboard
@@ -157,7 +164,8 @@ function ch_copy_cliboard(i) {
     setTooltip(thiscopybtn, tooltip, style);
     showTooltip(btnTrigger, tooltip);
     hideTooltip(btnTrigger);
-  };
+    console.log(msg);
+  }
 }
 // stripHtml safely
 function stripHtml(html) {
