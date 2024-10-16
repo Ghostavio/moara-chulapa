@@ -3,7 +3,7 @@ layout: default
 title: Serviços Oferecidos
 header_type: hero
 header_img: assets/servicos-header.webp
-permalink: servicos
+permalink: /servicos
 ---
 
 <section class="servicos d-flex mt-4">
