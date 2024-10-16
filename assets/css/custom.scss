@@ -411,7 +411,6 @@ h1 {
 
       p {
         margin-bottom: 0;
-        display: block;
 
         &::before {
           content: "";
@@ -420,7 +419,6 @@ h1 {
           height: -moz-available;
           height: -webkit-fill-available;
           height: fill-available;
-          max-height: 100%;
           display: block;
           position: absolute;
           margin-left: -15px;
@@ -491,6 +489,15 @@ h1 {
         color: #fff;
       }
     }
+  }
+}
+
+@media (hover: none),
+  (hover: on-demand),
+  (-moz-touch-enabled: 1),
+  (pointer: coarse) {
+  .servicos .caixa-esquerda .texto p::before {
+    display: none;
   }
 }
 
