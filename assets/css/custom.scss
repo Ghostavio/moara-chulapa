@@ -428,6 +428,8 @@ h2 .chulapa-header-link {
 
     .mobile {
       display: block;
+      object-fit: cover;
+      max-height: 300px;
     }
 
     .texto {
