@@ -606,7 +606,7 @@ h2 .chulapa-header-link {
     }
 
     q {
-      width: 100%;
+      width: 100% !important;
       margin-left: 2rem;
       padding-right: 2rem;
     }
@@ -950,7 +950,7 @@ h2 .chulapa-header-link {
   .servicos:nth-of-type(3) {
     .caixa-direita {
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
         margin-bottom: 0;
       }
     }
