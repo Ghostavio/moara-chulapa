@@ -433,8 +433,8 @@ h2 .chulapa-header-link {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 40px;
-      padding-right: 40px;
+      left: 30px;
+      padding-right: 30px;
       margin-top: auto;
       margin-bottom: auto;
       height: fit-content;
@@ -572,7 +572,7 @@ h2 .chulapa-header-link {
     q {
       position: relative;
       align-self: end;
-      width: 60%;
+      width: 70%;
       margin-left: 0;
       margin-top: 1.5rem;
 
@@ -601,7 +601,7 @@ h2 .chulapa-header-link {
     max-width: 100%;
 
     figure figcaption {
-      font-size: 80%;
+      font-size: 78%;
       right: 12px;
     }
 
@@ -637,8 +637,20 @@ h2 .chulapa-header-link {
       right: 18px;
     }
 
-    .caixa-esquerda .texto.bottom i {
-      display: inline-block;
+    .caixa-esquerda .texto {
+      left: 40px;
+      padding-right: 40px;
+
+      &.bottom i {
+        display: inline-block;
+      }
+    }
+
+    .caixa-direita,
+    .caixa-wrapper {
+      q {
+        width: 60%;
+      }
     }
   }
 }
@@ -989,7 +1001,7 @@ h2 .chulapa-header-link {
       font-size: 1rem;
 
       q {
-        width: 60%;
+        width: 70%;
         margin-top: 1.5rem;
       }
     }
