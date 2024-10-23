@@ -130,17 +130,17 @@ permalink: /servicos/
 </section>
 
 <section class="servicos ultimo d-flex justify-content-between mt-4">
-  <div class="caixa">
+  <div id="apoio-em-emissao-de-visto" class="caixa">
     <img class="desktop" src="/assets/servicos4.webp" alt="Serviços Oferecidos" />
     <div class="texto">
-      <h2>APOIO EM EMISSÃO DE VISTOS</h2>
+      <h2><a class="header-link" href="#apoio-em-emissao-de-visto">APOIO EM EMISSÃO DE VISTOS</a></h2>
       <p>Proporcionamos suporte completo para a emissão de vistos de negócios para países que exigem emissão prévia, com especialidade na emissão de visto chinês.</p>
     </div>
   </div>
-  <div class="caixa">
+  <div id="traducao-de-documentos" class="caixa">
     <img class="desktop" src="/assets/servicos5.webp" alt="Serviços Oferecidos" />
     <div class="texto">
-      <h2>TRADUÇÃO DE DOCUMENTOS</h2>
+      <h2><a class="header-link" href="#traducao-de-documentos">TRADUÇÃO DE DOCUMENTOS</a></h2>
       <p>Realizamos traduções qualificadas de documentos técnicos para os idiomas Espanhol, Inglês e Português.
       Oferecemos soluções precisas e eficientes para suas necessidades de visto e tradução, garantindo uma experiência descomplicada e profissional para seus negócios internacionais.</p>
     </div>
