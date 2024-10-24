@@ -1,4 +1,5 @@
-{%- if include.headertype =="splash" -%} {%- if include.imghero -%}
+{%- assign font-size = page.header_smaller_font | default: "normal-font" -%} {%-
+if include.headertype =="splash" -%} {%- if include.imghero -%}
 <header
   class="d-flex align-items-center splash-chulapa-image"
   style="background-image: url('{{ include.imghero | absolute_url }}')"
@@ -44,7 +45,7 @@
   </header>
   {%- elsif include.headertype == "hero" -%} {%- if include.imghero -%}
   <header
-    class="d-flex align-items-center hero-chulapa-image"
+    class="d-flex align-items-center hero-chulapa-image {{ font-size }}"
     style="background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('{{ include.imghero | absolute_url }}')"
   >
     {%- else -%}

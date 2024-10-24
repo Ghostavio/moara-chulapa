@@ -85,6 +85,10 @@ h1 {
   font-family: "League Spartan";
 }
 
+.smaller-font h1 {
+  font-size: 2.8rem;
+}
+
 .scroll-down {
   position: absolute;
   bottom: 50px;
@@ -696,6 +700,53 @@ h2 .chulapa-header-link {
   }
 }
 
+.parceiros {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 11% -117px;
+  background-size: 230px;
+
+  .texto {
+    flex: 1;
+    margin-right: 0;
+
+    hr {
+      margin-right: -50px;
+      height: 1px;
+      background-color: #9f5632;
+      display: none;
+    }
+
+    p:first-of-type {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: #7f1710;
+    }
+  }
+
+  .imagem,
+  .imagem img {
+    max-height: 398px;
+  }
+
+  .imagem {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 90px;
+      left: -15px;
+      width: calc(150%);
+      height: calc(100% - 90px);
+      background-color: #7f1710;
+      z-index: -1;
+    }
+  }
+}
+
 .desktop-960 {
   display: block;
 }
@@ -735,6 +786,12 @@ h2 .chulapa-header-link {
         width: 60%;
       }
     }
+  }
+}
+
+@media (min-width: 413px) {
+  .smaller-font h1 {
+    font-size: 3.3rem;
   }
 }
 
@@ -1047,6 +1104,20 @@ h2 .chulapa-header-link {
     }
   }
 
+  .parceiros {
+    background-image: url("../moara-brasao.png");
+
+    .texto {
+      margin-right: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .imagem::before {
+      width: calc(100% + 15px);
+      height: 241px;
+    }
+  }
+
   .desktop-960 {
     display: none;
   }
@@ -1091,6 +1162,10 @@ h2 .chulapa-header-link {
         margin-bottom: 0;
       }
     }
+  }
+
+  .parceiros .texto {
+    font-size: 0.95rem;
   }
 }
 
@@ -1178,6 +1253,10 @@ h2 .chulapa-header-link {
       }
     }
   }
+
+  .parceiros .texto {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 915px) {
@@ -1198,6 +1277,12 @@ h2 .chulapa-header-link {
         padding-left: 30px;
       }
     }
+  }
+}
+
+@media (min-width: 930px) {
+  .parceiros .texto hr {
+    display: block;
   }
 }
 
@@ -1239,6 +1324,35 @@ h2 .chulapa-header-link {
           width: 100%;
         }
       }
+    }
+  }
+
+  .parceiros {
+    background-position: 8% -142px;
+    background-size: 280px;
+
+    .texto {
+      margin-right: 3rem;
+
+      hr {
+        margin-right: -75px;
+      }
+
+      p:first-of-type {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .imagem,
+    .imagem img {
+      max-height: 440px;
+    }
+
+    .imagem::before {
+      top: 100px;
+      height: 270px;
+      left: -20px;
+      width: calc(100% + 20px);
     }
   }
 
@@ -1333,6 +1447,21 @@ h2 .chulapa-header-link {
       }
     }
   }
+
+  .parceiros {
+    background-position: 8% -143px;
+    background-size: 300px;
+
+    .imagem,
+    .imagem img {
+      max-height: 490px;
+    }
+
+    .imagem::before {
+      top: 115px;
+      height: 305px;
+    }
+  }
 }
 
 @media (min-width: 1050px) {
@@ -1407,6 +1536,18 @@ h2 .chulapa-header-link {
 
     &:first-of-type {
       margin-right: 141px;
+    }
+  }
+
+  .parceiros {
+    .imagem,
+    .imagem img {
+      max-height: 550px;
+    }
+
+    .imagem::before {
+      top: 130px;
+      height: 350px;
     }
   }
 }
