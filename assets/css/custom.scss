@@ -745,6 +745,113 @@ h2 .chulapa-header-link {
       z-index: -1;
     }
   }
+
+  .gute,
+  .clarice {
+    flex: 1;
+
+    .texto {
+      color: #515151;
+
+      p:first-of-type {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .gute {
+    max-width: initial;
+
+    .imagens {
+      img {
+        display: inline-flex;
+        border-radius: 0;
+        min-width: 50%;
+        max-width: initial;
+
+        &:last-of-type {
+          margin-top: 10px;
+          width: 100%;
+        }
+      }
+
+      .esquerda {
+        margin-right: 10px;
+
+        img {
+          max-width: 50%;
+
+          &:first-of-type {
+            padding-right: 5px;
+          }
+
+          &:nth-of-type(2) {
+            padding-left: 5px;
+          }
+
+          &:last-of-type {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .direita {
+        img {
+          width: 100%;
+        }
+      }
+
+      .gute-logo {
+        border: 1px solid;
+        padding: 16px;
+      }
+    }
+
+    .texto {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .clarice {
+    margin-top: 1.5rem;
+    flex-direction: column;
+
+    .esquerda {
+      .texto {
+        position: relative;
+        margin-right: 0;
+        padding-left: 2rem;
+
+        &::before {
+          content: "";
+          width: 1px;
+          background-color: #515151;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    .direita {
+      margin-top: 1.5rem;
+      align-self: center;
+
+      .texto {
+        background-color: #800000;
+        color: #fff;
+        margin-right: 0;
+        max-width: 320px;
+        min-width: 230px;
+        margin-top: -70px;
+        margin-left: 2rem;
+        margin-right: 0;
+        padding-top: 100px !important;
+        margin-left: 56px;
+      }
+    }
+  }
 }
 
 .desktop-960 {
@@ -889,6 +996,19 @@ h2 .chulapa-header-link {
       .texto {
         width: 70%;
       }
+    }
+  }
+
+  .parceiros .clarice {
+    flex-direction: row;
+
+    .clarice-logo {
+      margin-left: 0;
+    }
+
+    .direita {
+      margin-top: 0;
+      align-self: initial;
     }
   }
 }
@@ -1116,6 +1236,62 @@ h2 .chulapa-header-link {
       width: calc(100% + 15px);
       height: 241px;
     }
+
+    .gute {
+      max-width: 259px;
+      margin-right: 1.5rem;
+
+      .imagens {
+        transform: scale(52%) translate(-120px, -168px);
+
+        img {
+          display: inline;
+          max-width: initial;
+          min-width: initial;
+          width: initial !important;
+          padding: 0 !important;
+        }
+
+        .esquerda {
+          max-width: 312px;
+          text-align: justify;
+
+          img {
+            max-width: initial !important;
+          }
+        }
+
+        .direita {
+          max-width: 175px;
+        }
+
+        .gute-logo {
+          max-width: 175px;
+          padding: 15px !important;
+        }
+      }
+
+      .texto {
+        margin-top: -158px;
+        margin-right: 0;
+      }
+    }
+
+    .clarice {
+      margin-top: 1.5rem;
+
+      .direita {
+        img {
+          width: 70%;
+        }
+
+        .texto {
+          min-width: 210px;
+          margin-top: -53px;
+          margin-left: 40px;
+        }
+      }
+    }
   }
 
   .desktop-960 {
@@ -1163,9 +1339,42 @@ h2 .chulapa-header-link {
       }
     }
   }
+}
 
-  .parceiros .texto {
-    font-size: 0.95rem;
+@media (min-width: 840px) {
+  .parceiros {
+    .texto {
+      font-size: 0.95rem;
+    }
+
+    .gute {
+      max-width: 288px;
+
+      .imagens {
+        transform: scale(58%) translate(-105px, -133px);
+      }
+
+      .texto {
+        margin-top: -135px;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .clarice {
+      margin-top: 1.5rem;
+
+      .direita {
+        img {
+          width: 74%;
+        }
+
+        .texto {
+          min-width: 215px;
+          margin-top: -60px;
+          margin-left: 50px;
+        }
+      }
+    }
   }
 }
 
@@ -1254,8 +1463,38 @@ h2 .chulapa-header-link {
     }
   }
 
-  .parceiros .texto {
-    font-size: 1rem;
+  .parceiros {
+    .texto {
+      font-size: 1rem;
+    }
+
+    .gute {
+      max-width: 324px;
+
+      .imagens {
+        transform: scale(65%) translate(-87px, -99px);
+      }
+
+      .texto {
+        margin-top: -110px;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .clarice {
+      margin-top: 2rem;
+
+      .direita {
+        img {
+          width: 78%;
+        }
+
+        .texto {
+          margin-top: -62px;
+          margin-left: 50px;
+        }
+      }
+    }
   }
 }
 
@@ -1275,6 +1514,22 @@ h2 .chulapa-header-link {
       ul {
         margin-top: 1.5rem;
         padding-left: 30px;
+      }
+    }
+  }
+
+  .parceiros .clarice {
+    margin-top: 2rem;
+
+    .direita {
+      img {
+        width: initial;
+      }
+
+      .texto {
+        margin-top: -70px;
+        margin-left: 56px;
+        min-width: 230px;
       }
     }
   }
@@ -1354,6 +1609,23 @@ h2 .chulapa-header-link {
       left: -20px;
       width: calc(100% + 20px);
     }
+
+    .gute {
+      max-width: 379px;
+
+      .imagens {
+        transform: scale(76%) translate(-59px, -57px);
+      }
+
+      .texto {
+        margin-top: -65px;
+        margin-right: 2rem;
+      }
+    }
+
+    .clarice {
+      margin-top: 2.5rem;
+    }
   }
 
   .desktop-960 {
@@ -1386,6 +1658,20 @@ h2 .chulapa-header-link {
     .logo-parallax {
       width: 240px;
       right: 0;
+    }
+  }
+
+  .parceiros {
+    .gute {
+      max-width: 379px;
+
+      .imagens {
+        transform: scale(76%) translate(-59px, -57px);
+      }
+
+      .texto {
+        margin-top: -65px;
+      }
     }
   }
 }
@@ -1474,6 +1760,20 @@ h2 .chulapa-header-link {
       }
     }
   }
+
+  .parceiros {
+    .gute {
+      max-width: 423px;
+
+      .imagens {
+        transform: scale(85%) translate(-37px, -30px);
+      }
+
+      .texto {
+        margin-top: -30px;
+      }
+    }
+  }
 }
 
 @media (min-width: 1120px) {
@@ -1542,12 +1842,32 @@ h2 .chulapa-header-link {
   .parceiros {
     .imagem,
     .imagem img {
-      max-height: 550px;
+      max-height: 522px;
     }
 
     .imagem::before {
-      top: 130px;
-      height: 350px;
+      top: 116px;
+      height: 336px;
+    }
+
+    .gute {
+      max-width: 500px;
+
+      .imagens {
+        transform: none;
+      }
+
+      .texto {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .clarice {
+      margin-top: 3rem;
+
+      .esquerda .texto {
+        padding-left: 2rem;
+      }
     }
   }
 }
@@ -1568,6 +1888,12 @@ h2 .chulapa-header-link {
       h2 {
         font-size: 2rem;
       }
+    }
+  }
+
+  .parceiros {
+    .clarice .esquerda .texto {
+      padding-left: 3rem;
     }
   }
 }
