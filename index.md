@@ -5,6 +5,7 @@ header_type: splash
 header_img: assets/logo-moara-cor-1.webp
 showhardcodedsubtitle: true
 showliderancaprotagonismo: true
+showpaises: true
 excerpt: Conectando a essência brasileira ao mercado global
 ---
 

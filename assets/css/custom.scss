@@ -398,6 +398,49 @@ h2 .chulapa-header-link {
   }
 }
 
+#paises-em-que-atuamos {
+  background-image: url("../paises.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 58%;
+  background-size: 550px;
+  min-height: 430px;
+
+  > div {
+    position: relative;
+    min-height: 430px;
+
+    div {
+      max-width: 360px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p:first-of-type {
+      margin-bottom: 0.25rem;
+      padding-right: 90px;
+      padding-top: 0.25rem;
+    }
+
+    p:last-of-type {
+      position: absolute;
+      font-size: 0.8rem;
+      max-width: 360px;
+      margin-bottom: 0;
+      bottom: 16px;
+      left: 15px;
+    }
+  }
+}
+
+#contato {
+  background-color: #800000;
+}
+
 .servicos {
   flex-direction: column;
   margin-bottom: 0.5rem;
@@ -751,8 +794,6 @@ h2 .chulapa-header-link {
     flex: 1;
 
     .texto {
-      color: #515151;
-
       p:first-of-type {
         margin-bottom: 0.5rem;
       }
@@ -1153,6 +1194,10 @@ h2 .chulapa-header-link {
     }
   }
 
+  #paises-em-que-atuamos {
+    padding: 0;
+  }
+
   .servicos {
     flex-direction: row;
 
@@ -1428,6 +1473,20 @@ h2 .chulapa-header-link {
     }
   }
 
+  #paises-em-que-atuamos {
+    background-position-y: 58%;
+    background-size: 550px;
+    min-height: 430px;
+
+    > div {
+      min-height: 430px;
+
+      h1 {
+        margin-right: -120px;
+      }
+    }
+  }
+
   .servicos {
     .caixa-direita {
       font-size: 1rem;
@@ -1562,6 +1621,20 @@ h2 .chulapa-header-link {
           right: 1rem;
           bottom: 1rem;
         }
+      }
+    }
+  }
+
+  #paises-em-que-atuamos {
+    background-position-y: center;
+    background-size: 650px;
+    min-height: 470px;
+
+    > div {
+      min-height: 470px;
+
+      h1 {
+        margin-right: 0;
       }
     }
   }
@@ -1751,6 +1824,32 @@ h2 .chulapa-header-link {
 }
 
 @media (min-width: 1050px) {
+  #paises-em-que-atuamos {
+    background-size: 750px;
+    min-height: 470px;
+
+    > div {
+      min-height: 470px;
+
+      div,
+      p:last-of-type {
+        max-width: 360px;
+      }
+
+      p:first-of-type {
+        padding-right: 120px;
+        margin-bottom: 0.25rem;
+        padding-top: 0.25rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .servicos:nth-of-type(3) {
     .caixa-direita {
       font-size: 1rem;
@@ -1796,6 +1895,31 @@ h2 .chulapa-header-link {
 
     p {
       font-size: 1.1rem;
+    }
+  }
+
+  #paises-em-que-atuamos {
+    background-size: 800px;
+    min-height: 500px;
+
+    > div {
+      min-height: 500px;
+
+      div,
+      p:last-of-type {
+        max-width: 360px;
+      }
+
+      p:first-of-type {
+        padding-right: 80px;
+        margin-bottom: 0.5rem;
+        padding-top: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -1880,6 +2004,28 @@ h2 .chulapa-header-link {
   #somos-brasilidade {
     .logo-parallax {
       width: 300px;
+    }
+  }
+
+  #paises-em-que-atuamos {
+    background-size: initial;
+    min-height: 520px;
+
+    > div {
+      min-height: 520px;
+
+      div,
+      p:last-of-type {
+        max-width: 400px;
+      }
+
+      p:first-of-type {
+        padding-right: 0;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+      }
     }
   }
 

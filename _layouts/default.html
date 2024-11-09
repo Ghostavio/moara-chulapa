@@ -46,7 +46,8 @@ imghero=page.header_img projects=page.project_links %}
       {%- include components/lideranca-protagonismo.html-%}
     </div>
   </section>
-  {%- endif -%}
+  {%- endif -%} {% if page.showpaises %} {%- include components/paises.html-%}
+  {%- endif -%} {%- include components/contato.html-%}
 </main>
 {%- if page.show_bottomnavs -%} {%- include components/navbeforeafter.html -%}
 {%- endif -%} {%- if page.show_categories -%} {% assign size = page.categories |
