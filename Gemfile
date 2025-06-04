@@ -8,3 +8,5 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-include-cache'
 end
+
+gem "mutex_m", "~> 0.3.0"
